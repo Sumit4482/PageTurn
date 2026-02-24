@@ -1,8 +1,18 @@
 # PageTurn
 Pageturn: Your go-to destination for discovering, sharing, and discussing books. Explore diverse genres, and read reviews. Dive into a world of literature and ignite your passion for reading with Pageturn.
 
-![image](https://github.com/Sumit4482/20240319_Capstone_PageTurn/assets/61246873/939e6ed1-3e24-444f-867a-374c66180914)
+## Screenshots
 
+| | |
+|:-------------------------:|:-------------------------:|
+| ![Landing / Home](07-Screenshots/image%20(18).png) | ![Book catalog](07-Screenshots/image%20(19).png) |
+| *Landing / Home* | *Book catalog* |
+| ![Book details](07-Screenshots/image%20(20).png) | ![Reviews & interactions](07-Screenshots/image%20(21).png) |
+| *Book details* | *Reviews & interactions* |
+| ![User experience](07-Screenshots/image%20(22).png) | ![Additional feature](07-Screenshots/image%20(23).png) |
+| *User experience* | *Additional feature* |
+
+---
 
 # PAGETURN Capstone Project Checklist
 
