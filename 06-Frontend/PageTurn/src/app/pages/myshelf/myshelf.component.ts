@@ -5,6 +5,7 @@ import { AuthService } from '../../services/auth.service';
 import { CommonModule } from '@angular/common';
 import { BookService } from '../../services/book.service';
 import { RouterModule } from '@angular/router';
+import { COVER_PLACEHOLDER } from '../../Constants/cover';
 
 @Component({
   selector: 'app-myshelf',
@@ -14,6 +15,7 @@ import { RouterModule } from '@angular/router';
   imports: [NavbarComponent, CommonModule, RouterModule],
 })
 export class MyshelfComponent {
+  readonly coverPlaceholder = COVER_PLACEHOLDER;
   userData: any;
 
   wantToReadBooks: any[] = [];

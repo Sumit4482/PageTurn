@@ -9,6 +9,8 @@ import { ReviewService } from '../../services/review.service';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { COVER_PLACEHOLDER } from '../../Constants/cover';
+
 @Component({
   selector: 'app-book-details',
   standalone: true,
@@ -17,6 +19,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   imports: [NavbarComponent, CommonModule, FormsModule],
 })
 export class BookDetailsComponent {
+  readonly coverPlaceholder = COVER_PLACEHOLDER;
   bookId!: string;
   bookDetails: any;
   token!: string;

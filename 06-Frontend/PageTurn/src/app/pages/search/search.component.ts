@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { COVER_PLACEHOLDER } from '../../Constants/cover';
 
 @Component({
   selector: 'app-search',
@@ -11,6 +12,7 @@ import { CommonModule } from '@angular/common';
   imports: [NavbarComponent, CommonModule, RouterModule],
 })
 export class SearchComponent {
+  readonly coverPlaceholder = COVER_PLACEHOLDER;
   searchResults: any;
 
   constructor(private route: ActivatedRoute) {}

@@ -32,7 +32,7 @@
 
             <div *ngFor="let book of currentlyReadingBooks" style="display: flex;  margin-bottom: 10px;">
               <a [routerLink]="['/books', book._id]" style="display: flex;">
-                <img [src]="book.coverImage" alt="Book Cover" width="150" height="200">
+                <img [src]="book.coverImage" alt="Book Cover" width="150" height="200" (error)="$any($event.target).src=coverPlaceholder">
                 <div style="margin-left: 50px;">{{book.title}}</div>
 
               </a>
@@ -44,7 +44,7 @@
             <!-- Wrap each book card in an anchor tag -->
             <div *ngFor="let book of wantToReadBooks" style="display: flex;">
               <a [routerLink]="['/books', book._id]" style="display: flex; margin-bottom: 10px;">
-                <img [src]="book.coverImage" alt="Book Cover" width="150" height="200">
+                <img [src]="book.coverImage" alt="Book Cover" width="150" height="200" (error)="$any($event.target).src=coverPlaceholder">
                 <div style="margin-left: 50px;">{{book.title}}</div>
               </a>
             </div>
@@ -55,7 +55,7 @@
             <!-- Wrap each book card in an anchor tag -->
             <div *ngFor="let book of readBooks" style="display: flex;  margin-bottom: 10px;">
               <a [routerLink]="['/books', book._id]" style="display: flex;">
-                <img [src]="book.coverImage" alt="Book Cover" width="150" height="200">
+                <img [src]="book.coverImage" alt="Book Cover" width="150" height="200" (error)="$any($event.target).src=coverPlaceholder">
                 <div style="margin-left: 50px;">{{book.title}}</div>
               </a>
             </div>

@@ -5,6 +5,8 @@ import { BookService } from '../../services/book.service';
 import { CommonModule } from '@angular/common';
 import { log } from 'console';
 import { RouterModule } from '@angular/router';
+import { COVER_PLACEHOLDER } from '../../Constants/cover';
+
 @Component({
   selector: 'app-homepage',
   standalone: true,
@@ -13,6 +15,7 @@ import { RouterModule } from '@angular/router';
   imports: [NavbarComponent, CommonModule, RouterModule],
 })
 export class HomepageComponent {
+  readonly coverPlaceholder = COVER_PLACEHOLDER;
   quote: string = '';
   author: string = '';
   books: any[] = [];

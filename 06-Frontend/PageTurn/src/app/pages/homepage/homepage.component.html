@@ -19,7 +19,7 @@
       <div *ngFor="let book of recommendedBooks" class="book ">
         <a [routerLink]="['/books', book._id]">
           <div class="bookImage">
-            <img [src]="book.coverImage" alt="Book Cover" width="150" height="200">
+            <img [src]="book.coverImage" alt="Book Cover" width="150" height="200" (error)="$any($event.target).src=coverPlaceholder">
           </div>
           <div class="bookTitle"> {{ book.title }}</div>
           <div class="bookRating">
@@ -36,7 +36,7 @@
   <div class="heading2">Check this Out :</div>
   <div class="surpriseLayout">
     <div class="surpriseImg">
-      <img src="{{ randomBook?.coverImage }}" alt="Book Cover" *ngIf="randomBook && randomBook.coverImage" width="200" height="300">
+      <img src="{{ randomBook?.coverImage }}" alt="Book Cover" *ngIf="randomBook && randomBook.coverImage" width="200" height="300" (error)="$any($event.target).src=coverPlaceholder">
     </div>
     <div class="surpriseDetails" *ngIf="randomBook">
       <div class="surpriseH">
@@ -55,7 +55,7 @@
       <div *ngFor="let book of books" class="book scrollClass">
         <a [routerLink]="['/books', book._id]">
           <div class="bookImage">
-            <img [src]="book.coverImage" alt="Book Cover" width="150" height="200">
+            <img [src]="book.coverImage" alt="Book Cover" width="150" height="200" (error)="$any($event.target).src=coverPlaceholder">
           </div>
           <div class="bookTitle"> {{ book.title }}</div>
           <div class="bookRating">

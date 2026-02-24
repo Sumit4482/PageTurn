@@ -6,7 +6,7 @@
     <div *ngFor="let result of searchResults">
       <a [routerLink]="['/books', result._id]">
         <div class="bookCard" style="display: flex;">
-          <img [src]="result.coverImage" alt="Book Cover" width="150" height="200">
+          <img [src]="result.coverImage" alt="Book Cover" width="150" height="200" (error)="$any($event.target).src=coverPlaceholder">
           <div style="margin-left: 50px;">
             <p>Title: {{ result.title }}</p>
             <p>Author: {{ result.authors}}</p>

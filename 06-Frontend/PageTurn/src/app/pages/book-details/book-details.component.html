@@ -4,7 +4,7 @@
     <div class="leftSide">
       <div class="leftSideLayout">
         <div *ngIf="bookDetails" class="book" >
-          <img [src]="bookDetails.coverImage" alt="Book Cover" width="150" height="200" />
+          <img [src]="bookDetails.coverImage" alt="Book Cover" width="150" height="200" (error)="$any($event.target).src=coverPlaceholder" />
         </div>
         <div class="bookRatings">
           <span class="bookTitle" *ngIf="bookDetails" style="color: #726522">{{
